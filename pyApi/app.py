@@ -4,7 +4,9 @@ from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 
-
+@app.route('/')
+def homePage():
+    return "Welcome on my APi Site"
 @app.route('/international/')
 def internationalApi():
     url = 'https://www.indiabix.com/current-affairs/international/'
