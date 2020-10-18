@@ -35,8 +35,35 @@ class AppTheme {
     color: _secondary,
   );
 
+  static TextStyle headlineFourths(var fontSizee) {
+    return GoogleFonts.arvo(
+      fontSize: fontSizee,
+      fontWeight: FontWeight.bold,
+      color: colorScheme.onPrimary,
+    );
+  }
+
   static final TextTheme textTheme = TextTheme(
-    headline1: GoogleFonts.roboto(),
+    headline6: headlineFourths(20.0),
+    caption: GoogleFonts.abel(
+      fontSize: 12.0,
+      fontStyle: FontStyle.normal,
+      color: colorScheme.onPrimary,
+    ),
+    bodyText1: GoogleFonts.abrilFatface(
+        fontSize: 18.0,
+        fontWeight: FontWeight.bold,
+        color: colorScheme.onPrimary),
+    headline5: GoogleFonts.arvo(
+      fontSize: 16.0,
+      color: colorScheme.onPrimary,
+    ),
+    headline4: headlineFourths(18.0),
+    subtitle1: GoogleFonts.arvo(
+      color: colorScheme.onSecondary,
+      fontSize: 16.0,
+      fontWeight: FontWeight.bold,
+    ),
   );
 
   static final ThemeData themeData = new ThemeData(
@@ -54,5 +81,6 @@ class AppTheme {
     canvasColor: colorScheme.surface,
     unselectedWidgetColor: _lightSecondary,
     iconTheme: iconThemeData,
+    textTheme: textTheme,
   );
 }
